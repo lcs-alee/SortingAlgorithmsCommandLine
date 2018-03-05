@@ -42,6 +42,37 @@ print("-----")
 // ----------- Write code to sort the array here -----------
 print("Now sorting the array...")
 
+var sortedNumbers : [Int] = []
+
+var lowestValue = numbers[0]
+var lowestIndex = 0
+
+print("i")
+
+// Loop through to find the actual lowest value
+for i in 1..<numbers.count {
+    
+    //  If current number is lower then previous number
+    if numbers[i] < lowestValue {
+        lowestValue = numbers[i]
+        lowestIndex = i
+    }
+    print("Index is \(i) and the value is \(numbers[i])")
+}
+
+// Lowest number gets added to sorted list
+sortedNumbers.append(lowestValue)
+
+// Also remove the lowest value from the unsorted list
+numbers.remove(at: lowestIndex)
+
+// and unsorted list should repeat this process
+
+// remove numbers from unsorted list
+
+
+// add lowest number to sorted list
+
 // ----------- Final part of the program, show the sorted list -----------
 print("-----")
 print("The contents of the sorted list:")
